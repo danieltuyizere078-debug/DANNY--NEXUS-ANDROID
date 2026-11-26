@@ -1,5 +1,211 @@
 <!DOCTYPE html>
+<html lang="en"><!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANNY NEXUS</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#050b18;
+ color:white;
+}
+header{
+ padding:22px 15px;
+ text-align:center;
+ background:#08152b;
+ border-bottom:2px solid #087bff;
+}
+.logo{
+ font-size:30px;
+ font-weight:bold;
+ color:#168bff;
+ letter-spacing:2px;
+}
+.tagline{color:#b8c9e5;font-size:13px}
+nav{
+ display:flex;
+ overflow-x:auto;
+ background:#0b1930;
+ padding:12px;
+ gap:10px;
+}
+nav a{
+ color:white;
+ text-decoration:none;
+ padding:10px;
+ background:#10294b;
+ border-radius:8px;
+ white-space:nowrap;
+ font-size:13px;
+}
+main{padding:18px;max-width:800px;margin:auto}
+.hero{
+ text-align:center;
+ padding:30px 12px;
+ background:linear-gradient(140deg,#102b50,#07101f);
+ border:1px solid #1269d3;
+ border-radius:15px;
+}
+.hero h1{font-size:29px;color:#168bff}
+.hero p{color:#c4d5ee;line-height:1.6}
+button{
+ background:#087bff;
+ color:white;
+ border:0;
+ border-radius:8px;
+ padding:12px 18px;
+ font-weight:bold;
+ cursor:pointer;
+}
+h2{color:#168bff;margin-top:28px}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+}
+.card{
+ background:#0d1c34;
+ padding:17px;
+ border:1px solid #183c68;
+ border-radius:12px;
+}
+.card h3{color:#55aaff;margin-top:0}
+.card p{font-size:13px;color:#c2cde0;line-height:1.5}
+input,textarea{
+ width:100%;
+ padding:13px;
+ margin:7px 0;
+ border-radius:8px;
+ border:1px solid #24517f;
+ background:#081326;
+ color:white;
+}
+#result{
+ background:#10294b;
+ padding:12px;
+ border-radius:8px;
+ margin-top:10px;
+ color:#c8e1ff;
+}
+footer{
+ text-align:center;
+ padding:25px;
+ color:#8da4c4;
+ font-size:12px;
+}
+@media(max-width:450px){
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">DANNY NEXUS</div>
+ <p class="tagline">One Technology. Endless Possibilities.</p>
+ <p>Born in Rwanda, Built for the World.</p>
+</header>
+
+<nav>
+ <a href="#home">Home</a>
+ <a href="#assistant">AI Assistant</a>
+ <a href="#translate">Translator</a>
+ <a href="#education">Education</a>
+ <a href="#business">Business</a>
+ <a href="#studio">Studio</a>
+</nav>
+
+<main>
+
+<section class="hero" id="home">
+ <h1>Welcome to DANNY NEXUS</h1>
+ <p>Your world of technology starts here.</p>
+ <p>One platform. Many possibilities.</p>
+ <button onclick="document.getElementById('assistant').scrollIntoView()">
+ Get Started
+ </button>
+</section>
+
+<h2>Explore Our Technology</h2>
+
+<div class="grid">
+ <div class="card" id="assistant">
+  <h3>🤖 AI Assistant</h3>
+  <p>Ask questions and explore intelligent assistance.</p>
+  <button onclick="showDemo('AI Assistant')">Explore</button>
+ </div>
+
+ <div class="card" id="translate">
+  <h3>🌍 Translator</h3>
+  <p>A future home for communication across languages.</p>
+  <button onclick="showDemo('Translator')">Explore</button>
+ </div>
+
+ <div class="card" id="education">
+  <h3>📚 Education</h3>
+  <p>Learning resources and educational technology.</p>
+  <button onclick="showDemo('Education')">Explore</button>
+ </div>
+
+ <div class="card" id="business">
+  <h3>💼 Business</h3>
+  <p>Ideas, business planning and entrepreneurship.</p>
+  <button onclick="showDemo('Business')">Explore</button>
+ </div>
+
+ <div class="card" id="studio">
+  <h3>🎬 Creative Studio</h3>
+  <p>A future space for creative projects and media.</p>
+  <button onclick="showDemo('Creative Studio')">Explore</button>
+ </div>
+
+ <div class="card">
+  <h3>🎙️ Voice Technology</h3>
+  <p>Explore future voice-powered features.</p>
+  <button onclick="showDemo('Voice Technology')">Explore</button>
+ </div>
+</div>
+
+<h2>Try DANNY NEXUS</h2>
+<div class="card">
+ <p>Andika ubutumwa bwawe:</p>
+ <textarea id="message" rows="3" placeholder="Type your message here..."></textarea>
+ <button onclick="sendMessage()">Send</button>
+ <div id="result">Your demo response will appear here.</div>
+</div>
+
+</main>
+
+<footer>
+ <p>DANNY NEXUS © 2026</p>
+ <p>Born in Rwanda, Built for the World.</p>
+ <p>Technology for Everyone.</p>
+ <p>Prototype version — AI services are not connected yet.</p>
+</footer>
+
+<script>
+function showDemo(name){
+ document.getElementById("result").innerText =
+ name + " is part of the DANNY NEXUS prototype. This feature is not connected yet.";
+ document.getElementById("message").scrollIntoView();
+}
+function sendMessage(){
+ let msg=document.getElementById("message").value;
+ if(msg.trim()===""){
+  document.getElementById("result").innerText="Please enter a message.";
+ }else{
+  document.getElementById("result").innerText=
+  "Thank you! Your message has been received by this local demo. Real AI connection is coming in a future development stage.";
+ }
+}
+</script>
+
+</body>
+</html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
